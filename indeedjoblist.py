@@ -84,7 +84,4 @@ if __name__ == '__main__':
             jobfile.writerow(['Job Title','Company','Location','Job Description','Date Posted','Salary','New Job','Urgent']) 
             jobfile.writerows(record_list)
     except PermissionError:
-        with open('jobtrack.csv', mode='w', encoding='utf-8') as joborder:
-            jobfile = csv.writer(joborder)
-            jobfile.writerow(['Job Title','Company','Location','Job Description','Date Posted','Salary','New Job','Urgent']) 
-            jobfile.writerows(record_list)
+        print('Please kindly close the csv file')
